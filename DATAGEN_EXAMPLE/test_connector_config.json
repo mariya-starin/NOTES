@@ -1,18 +1,17 @@
 {
-  "name": "Test_LineFeed",
+  "name": "Test_LineFeed_timestamp_and_due_date",
   "config": {
+    "transforms" : "timestampNowField,formatDate",
+    "transforms.timestampNowField.type" : "com.github.jcustenborder.kafka.connect.transform.common.TimestampNowField$Value",
+    "transforms.timestampNowField.fields" : "timestamp",
     "connector.class": "io.confluent.kafka.connect.datagen.DatagenConnector",
     "value.converter": "org.apache.kafka.connect.json.JsonConverter",
-    "transforms": "formatDate",
     "transforms.formatDate.type": "org.apache.kafka.connect.transforms.TimestampConverter$Value",
     "transforms.formatDate.target.type": "string",
     "transforms.formatDate.field": "DueDate",
     "transforms.formatDate.format": "yyyy-MM-dd HH:mm:ss:SSS",
     "transforms.formatDate.unix.precision": "milliseconds",
-    "kafka.topic": "test",
-    "transforms" : "timestampNowField",
-    "transforms.timestampNowField.type" : "com.github.jcustenborder.kafka.connect.transform.common.TimestampNowField$Value",
-    "transforms.timestampNowField.fields" : "timestamp",
+    "kafka.topic": "test_timestamp",
     "schema.string": "{ \t\"name\": \"LineFeedRequest\", \t\"type\": \"record\", \t\"fields\": [ \t\t{\"name\": \"MESInstance\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t\"regex\": \"[A-Z][1-9]{8,8}\" \t\t\t} \t\t}}, \t\t{\"name\": \"FacilityCode\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t\"options\": [ \t\t\t\t\t\"MESME\",  \t\t\t\t\t\"MESMS\",  \t\t\t\t\t\"MESDT\",  \t\t\t\t\t\"Ignored\" \t\t\t\t] \t\t\t} \t\t}}, \t\t{\"name\": \"ActionCode\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t\"options\": [ \t\t\t\t  \"01\", \t\t\t\t  \"02\", \t\t\t\t  \"03\" \t\t\t\t] \t\t\t  } \t\t}}, \t\t{\"name\": \"LineFeedingRequestNumber\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t\"regex\": \"MESME0000000[1-9]\" \t\t\t} \t\t}}, \t\t{\"name\": \"LineFeedingRequestItem\", \"type\": { \t\t\t\"type\": \"int\", \t\t\t\"arg.properties\": { \t\t\t\t\"iteration\": { \t\t\t\t\t\"start\": 0 \t\t\t\t} \t\t\t} \t\t}}, \t\t{\"name\": \"PartNumber\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t\"regex\": \"[1-9]{7}\" \t\t\t} \t\t}}, \t\t{\"name\": \"Quantity\", \"type\": { \t\t\t\"type\": \"int\", \t\t\t\"arg.properties\":{ \t\t\t\t\"range\":{ \t\t\t\t   \"min\":1, \t\t\t\t   \"max\":40 \t\t\t\t} \t\t\t } \t\t}}, \t\t{\"name\": \"UnitOfMeasure\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t \"options\": [ \t\t\t\t   \"EA\", \t\t\t\t   \"MT\" \t\t\t\t ] \t\t\t   } \t\t}}, \t\t{\"name\": \"StagingMethod\", \"type\": { \t\t\t\"type\": \"int\", \t\t\t\"arg.properties\":{ \t\t\t\t\"range\":{ \t\t\t\t   \"min\":1, \t\t\t\t   \"max\":10 \t\t\t\t} \t\t\t } \t\t}}, \t\t{\"name\": \"MaterialFacadeLocation\", \"type\": { \t\t\t\"type\": \"string\", \t\t\t\"arg.properties\": { \t\t\t\t\"regex\": \"[A-Z][1-9]{8,8}\" \t\t\t} \t\t}},         {\"name\": \"DueDate\", \"type\": {             \"type\": \"long\",             \"format_as_time\" : \"unix_long\",             \"arg.properties\": {               \"iteration\": { \"start\": 1676978539000,   \"step\": 300000}             }           }}  \t] }"
   }
 }
