@@ -10,7 +10,15 @@
 
     confluent local services status
     confluent local services kafka log -f
-    
+
+    confluent local services connect connector	            Manage connectors.
+    confluent local services connect log	                Print logs showing Connect output.
+    confluent local services connect plugin	                Manage Connect plugins.
+    confluent local services connect start	                Start Connect.
+    confluent local services connect status	                Check if Connect is running.
+    confluent local services connect stop	                Stop Connect.
+    confluent local services connect top	                View resource usage for Connect.
+    confluent local services connect version	            Print the current version of Connect.
 
 _CREATE SCHEMA_
 
