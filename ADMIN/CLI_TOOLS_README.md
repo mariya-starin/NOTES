@@ -1,4 +1,8 @@
-### TOPICS
+### CLI TOOLS 
+
+![CLI_TOOLS](../images/cli_commands.png)
+
+#### TOPICS
 
 *LIST*
 
@@ -43,9 +47,9 @@
 *PRODUCE FROM FILE*
 
         kafka-console-producer \
-        --broker-list kafka-1:19092 \
-        --topic users \
-        < messages.txt
+        --broker-list localhost:9092 \
+        --topic  \
+        < message.txt
 
 *TOPIC SIZE* 
 

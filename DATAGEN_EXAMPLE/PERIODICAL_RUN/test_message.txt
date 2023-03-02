@@ -1,0 +1,1 @@
+["my-connector-name",{"task.id":0}]&{"task.generation":1,"random.seed":-7813716055020847000,"current.iteration":0}
