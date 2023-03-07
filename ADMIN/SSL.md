@@ -1,4 +1,6 @@
-### Encrypt Client Broker Traffic
+### Encrypt Client Broker Traffic 
+
+#### Encryption in transit
 
 *Create kafka-client trustore and import the CA*
 

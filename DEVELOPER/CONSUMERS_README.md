@@ -39,12 +39,12 @@ When commits are performed manually - both can be combined if needed
 At most once
 
     var records=consumer.poll();
-    consumer.commitSync(); // process records
+    consumer.commitSync();// process records
 
 At least once
 
     var records=consumer.poll();
-    ... // process records 
+    ... // process records
     consumer.commitSync();
 
 

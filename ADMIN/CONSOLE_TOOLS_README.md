@@ -182,7 +182,7 @@
     --execute \
     --to-datetime 2021-06-01T17:14:23.933
 
-### KAFKA ACLS
+### KAFKA ACLS - Authorization
 
   [ACLS DOCS](https://docs.confluent.io/platform/current/kafka/authorization.html#authorization-using-acls)
 
