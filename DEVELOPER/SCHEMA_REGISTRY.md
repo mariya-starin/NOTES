@@ -19,4 +19,4 @@
 - Both Forward and Backward compatibility are fulfilled
 
 
-![LISTENER_PROTOCOLS](../images/listener_protocols.png)
+![COMPATABILITY](../images/schema_compatability.png)
